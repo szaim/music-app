@@ -3,6 +3,8 @@
 
 
 #app {
+	/*added margin to add spacing for next page (below) content*/
+	/*added margin to add spacing for next page (below) content*/
 	background-image: url(http://www.musicpiya.com/wp-content/uploads/2015/02/Free-Music-Wallpapers-HD-for-PC-1.jpg);
 	/*height 100vh (viewport height) is similar to setting height 100% ,but is a better way to set for background 
 	because if you cut the viewport it will still act as a full cover and also enables the body to extend wrap around all content instead of just a portion */
@@ -19,5 +21,12 @@
 	align-items: center;
 }
 
+.background-video {
+	position: fixed;
+	z-index: -99;
+	width: 100%;
+	height: 100vh;
+	background-size:cover;
+}
 
 
