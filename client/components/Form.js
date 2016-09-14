@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var connect = require('react-redux').connect;
 var actions = require('../actions/actions');
+// var Boarder = require('./boarderList');
 var Playlist = require('./musicPlayerList');
 
 var Form = React.createClass({
@@ -20,9 +21,13 @@ var Form = React.createClass({
 			return (
 				
 			<div key={index}>
-				<Playlist key={index} num={index+1} images={value.album.images[2].url}
-					name={value.name} artist={value.artists[0].name} 
-					song={value.preview_url}/>
+				<Playlist 
+				key={index} 
+				num={index+1} 
+				images={value.album.images[2].url}
+				name={value.name} 
+				artist={value.artists[0].name} 
+				song={value.preview_url}/>
 			</div>
 
 			);
@@ -33,13 +38,20 @@ var Form = React.createClass({
 
 
 			<div className="container">
+			<div>
 			<form className='text-xs-center input-group' onSubmit={this.onSubmit}>
 				<input  className='form-control' type='text' placeholder='Enter Song' ref='userInput' required />
 				<span className='input-group-btn'>	
 				<button type='submit' className='btn btn-outline-secondary'>Search</button>
 				</span>
 			</form>
+			</div>
+			<div className='ScrollStyle'>
+
+			
 			{list}
+			</div>
+			
 			</div>
 
 

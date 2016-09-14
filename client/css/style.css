@@ -1,7 +1,7 @@
-
+/*
 * {
 	border: 1px solid red;
-}
+}*/
 
 
 #app {
@@ -13,7 +13,7 @@
 	height: 100vh;
 	background-size: cover;
 	/*added margin to add spacing for next page (below) content*/
-	margin-bottom: 50px;
+/*	margin-bottom: 50px;*/
 	background-color: yellow;
 	display: flex;
 	flex-direction: column;
@@ -44,4 +44,28 @@ input[type='text']{
 
 button {
 	height: 55px;
+}
+
+.boarder {
+/*	background-color: grey;
+*/	height: 500px;
+	
+}
+
+.musicList {
+/*	background-color:grey;*/
+	width:400px;
+}
+
+.singleSong {
+	opacity: 1;
+	background-color: grey;
+}
+
+.ScrollStyle {
+    max-height: 500px;
+    overflow-y: scroll;
+    background-color:black;
+    opacity: .5;
+
 }
