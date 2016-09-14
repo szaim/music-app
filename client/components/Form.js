@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var connect = require('react-redux').connect;
 var actions = require('../actions/actions');
+var Playlist = require('./musicPlayerList');
 
 var Form = React.createClass({
 
@@ -17,7 +18,12 @@ var Form = React.createClass({
 		var list = this.props.musicList.map(function(value, index) {
 			console.log("value",value.album.name);
 			return (
-			<div key={index}>{value.album.name}</div>
+				
+			<div key={index}>
+				<Playlist key={index} num={index+1} images={value.album.images[2].url}
+					name={value.name} artist={value.artists[0].name} 
+					song={value.preview_url}/>
+			</div>
 
 			);
 		});
@@ -44,3 +50,5 @@ var mapStateToProps = function(state, props) {
 var Container = connect(mapStateToProps)(Form);
 
 module.exports = Container;
+
+

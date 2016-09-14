@@ -6,7 +6,7 @@ var Provider = require('react-redux').Provider;
 var connect = require('react-redux').connect;
 var actions = require('./actions/actions');
 var Form = require('./components/Form');
-
+var Playlist = require('./components/musicPlayerList');
 
 
 var App = React.createClass({
