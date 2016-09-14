@@ -10,7 +10,7 @@ var Playlist = React.createClass({
 
 
 		return (
-			<div>
+			<div className='musicList'>
 				<ul className='list-unstyled'>
 				<li>
 					{this.props.num}

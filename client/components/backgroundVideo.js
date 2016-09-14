@@ -7,12 +7,11 @@ var actions = require('../actions/actions');
 var BackgroundVideo = function() {
 
 
+
 	return (
 		<div className='video'>
-		<video autoplay='true' loop>
-			<source src='' type='video/mp4'>
-			<source src='' type='video/webm'>
-
+		<video autoPlay='true' loop>
+			<source src='./songs/test.mp4' type='video/mp4' />
 		</video>
 		</div>
 		);

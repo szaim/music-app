@@ -29,13 +29,20 @@ var Form = React.createClass({
 		});
 
 		return (
+		
+
+
 			<div className="container">
-			<form className='text-xs-center' onSubmit={this.onSubmit}>
-				<input  type='text' placeholder='Enter Song' ref='userInput' required />
-				<button type='submit' className='btn btn-primary'>Search</button>
+			<form className='text-xs-center input-group' onSubmit={this.onSubmit}>
+				<input  className='form-control' type='text' placeholder='Enter Song' ref='userInput' required />
+				<span className='input-group-btn'>	
+				<button type='submit' className='btn btn-outline-secondary'>Search</button>
+				</span>
 			</form>
 			{list}
 			</div>
+
+
 			);
 	}
 

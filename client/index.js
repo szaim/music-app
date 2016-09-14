@@ -8,6 +8,7 @@ var actions = require('./actions/actions');
 var Form = require('./components/Form');
 var Playlist = require('./components/musicPlayerList');
 require('./css/style.css');
+var BackgroundVideo = require('./components/backgroundVideo');
 
 
 var App = React.createClass({
@@ -23,6 +24,7 @@ var App = React.createClass({
 
     return (
       <div className="container center">
+      
          <Form />
 
       </div>
