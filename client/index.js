@@ -7,6 +7,7 @@ var connect = require('react-redux').connect;
 var actions = require('./actions/actions');
 var Form = require('./components/Form');
 var Playlist = require('./components/musicPlayerList');
+require('./css/style.css');
 
 
 var App = React.createClass({
@@ -14,7 +15,7 @@ var App = React.createClass({
   render: function() {
 
     return (
-      <div className="container">
+      <div className="container center">
          <Form />
       </div>
     )

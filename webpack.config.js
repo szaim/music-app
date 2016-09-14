@@ -20,7 +20,10 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react']
                 }
-            }
+            },
+            //added to webpack to be able to import css file to index.js (render)
+            // installed:   npm install style-loader css-loader --save-dev
+             { test: /\.css$/, loader: "style-loader!css-loader" }
         ]
     }
 };
