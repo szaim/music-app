@@ -11,7 +11,7 @@ var Playlist = React.createClass({
 
 		return (
 			<div>
-				<ul>
+				<ul className='list-unstyled'>
 				<li>
 					{this.props.num}
 					<img src={this.props.images} /> 

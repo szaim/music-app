@@ -29,9 +29,9 @@ var Form = React.createClass({
 		});
 
 		return (
-			<div>
-			<form onSubmit={this.onSubmit}>
-				<input type='text' placeholder='Enter Song' ref='userInput' required />
+			<div className="container">
+			<form className='text-xs-center' onSubmit={this.onSubmit}>
+				<input  type='text' placeholder='Enter Song' ref='userInput' required />
 				<button type='submit' className='btn btn-primary'>Search</button>
 			</form>
 			{list}
