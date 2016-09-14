@@ -17,7 +17,13 @@ var spotifyApi = new SpotifyWebApi({
 
 app.get("/api", function(req, res) {
 	// searchTracks (can be changed) specify's search key word
-	spotifyApi.searchTracks('house')
+  // we should add a query "request.query" as a parametre
+  //add query to body**
+
+  //var q = req.query.q (this allows us to search by query + search variable in the url endpoint)
+  var q = req.query.q
+  //the arguement q in searchTracks(arguement) is the search term for the get request
+	spotifyApi.searchTracks(q)
   .then(function(data) {
     console.log('Artist albums', data.body);
     res.send(data.body);
