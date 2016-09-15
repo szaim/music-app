@@ -71,8 +71,23 @@ button {
 
 .span-img {
 	padding-left: 6rem;
+	width: 418px; 
+    height: 240px; 
+    overflow: hidden;
 }
 
+.poster-img {
+	width: 100%;
+	clip: rect(30px, auto, auto, 10px);
+	top: -20px;
+	left: 10px;
+	position: relative;
+}
+
+.title{
+	padding-right:10em; 
+	color: white;
+}
 
 .boarder {
 /*	background-color: grey;
