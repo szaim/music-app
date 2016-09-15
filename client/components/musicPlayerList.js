@@ -8,6 +8,7 @@ var Playlist = React.createClass({
 
 	selectedPoster: function(selected) {
 		console.log('selected song!');
+		console.log('poster form playlist', this.props.poster);
 		// var selected = {this.props.images}
 
 
@@ -24,18 +25,20 @@ var Playlist = React.createClass({
 
 
 			<div onClick={this.selectedPoster} className='musicList offset-sm-7'>
-			<Poster />
-				<ul className='list-unstyled'>
+				<ul className='list-unstyled '>
 				<li className='singleSong'>
-					{this.props.num}
-					<img src={this.props.images} /> 
-					{this.props.name} 
-					{this.props.artist} 
-					<audio controls>
+					<span>{this.props.num}</span>
+					<img className='p-l-0.5' src={this.props.images} /> 
+					<span className='p-l-1 m-r-0'>
+					{this.props.name}, {this.props.artist} 
+					</span>
+					<audio  controls>
 						<source src={this.props.song} />
 					</audio>
 				</li>
+
 				</ul>
+
 			</div>
 			);
 	}

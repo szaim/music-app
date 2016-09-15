@@ -33,6 +33,7 @@
 	background-size:cover;
 }
 
+
 input {
 	height: 55px;
 	
@@ -59,7 +60,8 @@ button {
 
 .singleSong {
 	opacity: 1;
-	background-color: grey;
+	background-color: #333333;
+	border-radius: 10px;
 }
 
 .ScrollStyle {
@@ -68,4 +70,36 @@ button {
     background-color:black;
     opacity: .5;
 
+}
+
+span {
+	color: white;
+	font-size: 0.8em;
+}
+audio {
+	margin-left: 8px;
+  background-color: black;
+  -webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+
+
+}
+
+audio:hover, audio:focus, audio:active
+{
+
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
 }

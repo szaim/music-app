@@ -21,9 +21,11 @@ var Form = React.createClass({
 			return (
 				
 			<div key={index}>
+			
 				<Playlist 
 				key={index} 
 				num={index+1} 
+				poster={value.album.images[0].url}
 				images={value.album.images[2].url}
 				name={value.name} 
 				artist={value.artists[0].name} 
@@ -38,9 +40,9 @@ var Form = React.createClass({
 
 
 			<div className="container">
-			<div>
+			<div className=''> 
 			<form className='text-xs-center input-group' onSubmit={this.onSubmit}>
-				<input  className='form-control' type='text' placeholder='Enter Song' ref='userInput' required />
+				<input  className='form-control' type='text' placeholder='Type the name of a song' ref='userInput' required />
 				<span className='input-group-btn'>	
 				<button type='submit' className='btn btn-outline-secondary'>Search</button>
 				</span>
