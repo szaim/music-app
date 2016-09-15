@@ -13,7 +13,7 @@
 
 <div class="video-background">
     <div class="video-foreground">
-      <iframe src="https://www.youtube.com/embed/kOkQ4T5WO9E?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&enablejsapi=1&playlist=kOkQ4T5WO9E" frameborder="0" allowfullscreen ></iframe>
+      <iframe id='ytplayer' src="https://www.youtube.com/embed/C_3d6GntKbk?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&enablejsapi=1&playlist=5Nrv5teMc9Y,kOkQ4T5WO9E,KO_3Qgib6RQ" frameborder="0" allowfullscreen ></iframe>
     </div>
   </div> 
 
@@ -29,8 +29,37 @@
   <div id="app">
     
 
-
+<!-- C_3d6GntKbk,vWaRiD5ym74 --> 
   </div>
+  <script type="text/javascript">
+  var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+            events: {
+                'onReady': onPlayerReady,
+            }
+        });
+    }
+
+    function onPlayerReady() {
+        player.playVideo();
+        // Mute!
+        player.mute();
+
+    }
+
+
+
+
+
+  </script>
   <script src="music-app.1.0.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"  crossorigin="anonymous"></script>

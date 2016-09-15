@@ -9,6 +9,12 @@ var Form = require('./components/Form');
 var Playlist = require('./components/musicPlayerList');
 require('./css/style.css');
 var BackgroundVideo = require('./components/backgroundVideo');
+var router = require('react-router');
+var Router = router.Router;
+var Route = router.Route;
+var hashHistory = router.hashHistory;
+var IndexRoute = router.IndexRoute;
+var Link = router.Link;
 
 
 var App = React.createClass({
@@ -20,7 +26,10 @@ var App = React.createClass({
 //   </iframe>
 // </div>
 
+
+
   render: function() {
+
 
     return (
       <div className="container center">
@@ -37,13 +46,8 @@ var App = React.createClass({
 
 });
 
-// var mapStateToProps = function(state, props) {
-//   return {
-//     musicList: state.musicList
-//   }
-// }
 
-// var Container = connect(mapStateToProps)(App)
+
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(

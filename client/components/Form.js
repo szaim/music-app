@@ -7,6 +7,7 @@ var Playlist = require('./musicPlayerList');
 
 var Form = React.createClass({
 
+
 	onSubmit: function(e) {
 		e.preventDefault();
 		var searchItem = this.refs.userInput.value;
