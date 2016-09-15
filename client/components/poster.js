@@ -10,8 +10,13 @@ var Poster = React.createClass({
 	//console.log is pulling the new poster value from the newPoster state (after click event)
 	console.log("poster", this.props.posters);
 		return (
-			<div className='poster '>
-				<img className="img" src={this.props.posters} />
+			<div className='poster col-xs-6 text-xs-center '>
+			<div className="span-img">
+				<img className="poster-img img-fluid  m-t-4 " src={this.props.posters} />
+			</div>
+			<div className="title">
+				<h5>{this.props.posterTitle}</h5>
+			</div>
 			</div>
 		)
 	}
@@ -22,7 +27,8 @@ var Poster = React.createClass({
 var mapStateToProps = function(state, props) {
   return {
     musicList: state.musicList,
-    posters: state.poster
+    posters: state.poster,
+    posterTitle: state.title
   }
 }
 

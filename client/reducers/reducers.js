@@ -4,7 +4,8 @@ var update = require('react-addons-update');
 var initialState = {
 	musicList:[],
 	//added poster property to fix selected dispatch action error (react error: needed poster property to recognize action event)
-	poster: ""
+	poster: "",
+	title: ""
 }
 
 
@@ -29,7 +30,8 @@ var reducer = function (state, action) {
 	//action reducer grabs data argument from fetchSelectedData dispatch and sets new poster value
 	else if (action.type === actions.FETCH_DATA_SELECTED) {
 		var newPoster = update(state, {
-			poster: {$set: action.poster}
+			poster: {$set: action.poster},
+			title: {$set: action.title}
 		});
 		console.log('new poster', newPoster);
 		return newPoster

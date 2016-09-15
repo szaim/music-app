@@ -17,10 +17,11 @@ var fetchDataError = function(error) {
 };
 
 var FETCH_DATA_SELECTED = 'FETCH_DATA_SELECTED';
-var fetchDataSelected = function(poster) {
+var fetchDataSelected = function(poster, title) {
   return {
     type: FETCH_DATA_SELECTED,
-    poster: poster
+    poster: poster,
+    title: title
   }
 };
 

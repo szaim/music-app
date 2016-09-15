@@ -18,7 +18,7 @@ var Playlist = React.createClass({
 		// console.log('poster form playlist', this.props.poster);
 	
 		//passing the api poster value to the fetchDataSelected action in the argument.
-		this.props.dispatch(actions.fetchDataSelected(this.props.poster));
+		this.props.dispatch(actions.fetchDataSelected(this.props.poster, this.props.name));
 		this.setState({
 			checked: true
 		})
@@ -32,7 +32,7 @@ var Playlist = React.createClass({
 
 		return (
 		
-			<div onClick={this.selectedPoster} className='musicList offset-sm-7'>
+			<div onClick={this.selectedPoster} className='musicList offset-sm-7 m-t-1'>
 				
 				<ul className='list-unstyled '>
 				<li className='singleSong'>

@@ -20,17 +20,17 @@ var Form = React.createClass({
 			console.log("value",value.album.name);
 			return (
 				
-			<div key={index}>
+		
 			
 				<Playlist 
 				key={index} 
 				num={index+1} 
-				poster={value.album.images[0].url}
+				poster={value.album.images[1].url}
 				images={value.album.images[2].url}
 				name={value.name} 
 				artist={value.artists[0].name} 
 				song={value.preview_url}/>
-			</div>
+			
 
 			);
 		});
