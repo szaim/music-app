@@ -2,19 +2,33 @@
 * {
 	border: 1px solid red;
 }*/
-
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
 #app {
 	/*added margin to add spacing for next page (below) content*/
 	/*added margin to add spacing for next page (below) content*/
-	background-image: url(https://media.giphy.com/media/12j6TXGnU1PQkw/giphy.gif);
+	// background-image: url(https://media.giphy.com/media/12j6TXGnU1PQkw/giphy.gif);
 	/*height 100vh (viewport height) is similar to setting height 100% ,but is a better way to set for background 
 	because if you cut the viewport it will still act as a full cover and also enables the body to extend wrap around all content instead of just a portion */
 	height: 100vh;
 	background-size: cover;
 	/*added margin to add spacing for next page (below) content*/
 /*	margin-bottom: 50px;*/
-	background-color: yellow;
+	// background-color: yellow;
 	display: flex;
 	flex-direction: column;
 	/* vertical center*/
@@ -67,10 +81,13 @@ button {
 .ScrollStyle {
     max-height: 500px;
     overflow-y: scroll;
-    background-color:black;
+    background-image:url(https://wallpaperscraft.com/image/line_slanting_dark_background_surface_texture_50392_3840x2160.jpg);
     opacity: .5;
+    border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
 
 }
+
 
 span {
 	color: white;
@@ -93,12 +110,12 @@ border-radius:7px 7px 7px 7px ;
 
 }
 
-audio:hover, audio:focus, audio:active
+li:hover, li:focus, li:active
 {
 
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-box-shadow: 15px 15px 20px black;
+-moz-box-shadow: 15px 15px 20px black;
+box-shadow: 15px 15px 20px black;
 -webkit-transform: scale(1.05);
 -moz-transform: scale(1.05);
 transform: scale(1.05);
