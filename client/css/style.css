@@ -70,11 +70,13 @@ button {
 .musicList {
 /*	background-color:grey;*/
 	width:400px;
+
 }
+
 
 .singleSong {
 	opacity: 1;
-	background-color: #333333;
+	background-color: #000000;
 	border-radius: 10px;
 }
 

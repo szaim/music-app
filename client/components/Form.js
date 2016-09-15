@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var connect = require('react-redux').connect;
 var actions = require('../actions/actions');
-// var Boarder = require('./boarderList');
+var Poster = require('./poster');
 var Playlist = require('./musicPlayerList');
 
 var Form = React.createClass({
@@ -49,9 +49,9 @@ var Form = React.createClass({
 			</form>
 			</div>
 			<div className='ScrollStyle'>
-
-			
+			<Poster /> 
 			{list}
+		
 			</div>
 			
 			</div>

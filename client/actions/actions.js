@@ -16,6 +16,15 @@ var fetchDataError = function(error) {
 	}
 };
 
+var FETCH_DATA_SELECTED = 'FETCH_DATA_SELECTED';
+var fetchDataSelected = function(poster) {
+  return {
+    type: FETCH_DATA_SELECTED,
+    poster: poster
+  }
+};
+
+
 
 var fetchData = function(query) {
    return function(dispatch) {
@@ -47,8 +56,11 @@ var fetchData = function(query) {
 exports.fetchData = fetchData;
 exports.FETCH_DATA_SUCCESS = FETCH_DATA_SUCCESS;
 exports.fetchDataSuccess = fetchDataSuccess;
+exports.FETCH_DATA_SELECTED = FETCH_DATA_SELECTED;
+exports.fetchDataSelected = fetchDataSelected;
 exports.FETCH_DATA_ERROR = FETCH_DATA_ERROR;
 exports.fetchDataError = fetchDataError;
+
 
 // const searchTrack = function(query) {
 //     console.log('SEARCH TRACK');
