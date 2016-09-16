@@ -65,28 +65,35 @@ button {
 .poster {
 	position: fixed;
 	height: 70%;
+	// overflow: hidden;
 
 	
 }
 
 .span-img {
 	padding-left: 6rem;
-	width: 418px; 
-    height: 240px; 
-    overflow: hidden;
+	width: 100%; 
+    height: 50%; 
+    background-position:35% 0%;
+
 }
+
 
 .poster-img {
 	width: 100%;
-	clip: rect(30px, auto, auto, 10px);
-	top: -20px;
-	left: 10px;
-	position: relative;
+	// clip: rect(30px, auto, auto, 10px);
+	// top: -20px;
+	// left: 10px;
+	// position: relative;
+	// -webkit-background-size:cover;
+ //  	-moz-background-size:cover;
+ //  	-o-background-size:cover;
 }
 
 .title{
 	padding-right:10em; 
 	color: white;
+	text-decoration: underline;
 }
 
 .boarder {

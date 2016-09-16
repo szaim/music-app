@@ -7,14 +7,23 @@ var Playlist = require('./musicPlayerList');
 
 var Poster = React.createClass({
 	render: function() {
+		var divStyle = {
+  			// backgroundColor: 'white',
+  			backgroundRepeat: 'no-repeat',
+  			backgroundSize: "center",
+  			// backgroundPosition: 'center',
+  			backgroundImage: 'url(' + this.props.posters + ')'
+  			
+
+  			
+	};
 	//console.log is pulling the new poster value from the newPoster state (after click event)
 	console.log("poster", this.props.posters);
 		return (
-			<div className='poster col-xs-6 text-xs-center hidden-sm-down'>
-			<div className="span-img">
-				<img className="poster-img img-fluid  m-t-4 " src={this.props.posters} />
-			</div>
-			<div className="title ">
+			<div className='poster col-xs-6 text-xs-center hidden-sm-down m-t-1' >
+			<div className="span-img" style={divStyle} />
+	
+			<div className="title">
 				<h5>{this.props.posterTitle}</h5>
 			</div>
 			</div>
