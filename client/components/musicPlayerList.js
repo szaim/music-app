@@ -13,6 +13,8 @@ var Playlist = React.createClass({
 	},
 
 	selectedPoster: function(e) {
+		var song = document.getElementById(this.props.num);
+		song.volume = 0.2;
 		e.preventDefault();
 		console.log('selected song!');
 		// console.log('poster form playlist', this.props.poster);
@@ -41,7 +43,7 @@ var Playlist = React.createClass({
 					<span className='p-l-1 m-r-0'>
 					{this.props.name}, {this.props.artist} 
 					</span>
-					<audio controls onPlay={this.selectedPoster}>
+					<audio id={this.props.num} controls onPlay={this.selectedPoster} volume>
 						<source src={this.props.song} />
 					</audio>
 				</li>
