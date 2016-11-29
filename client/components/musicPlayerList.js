@@ -35,13 +35,13 @@ var Playlist = React.createClass({
 			<div onClick={this.selectedPoster} className='musicList offset-sm-7 m-t-1'>
 				
 				<ul className='list-unstyled '>
-				<li className='singleSong'>
+				<li  className='singleSong'>
 					<span>{this.props.num}</span>
 					<img className='p-l-0.5' src={this.props.images} /> 
 					<span className='p-l-1 m-r-0'>
 					{this.props.name}, {this.props.artist} 
 					</span>
-					<audio  controls>
+					<audio controls onPlay={this.selectedPoster}>
 						<source src={this.props.song} />
 					</audio>
 				</li>
