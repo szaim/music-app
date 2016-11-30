@@ -42,7 +42,8 @@ var Form = React.createClass({
 
 
 			<div className="container">
-			<div className=''> 
+			<h1 className='header-title'>Spotify Vibe</h1>
+			<div className=''>
 			<form className='text-xs-center input-group' onSubmit={this.onSubmit}>
 				<input  className='form-control' type='text' placeholder='Type the name of a song' ref='userInput' required />
 				<span className='input-group-btn'>	

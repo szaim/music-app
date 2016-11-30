@@ -22,7 +22,7 @@
 #app {
 	/*added margin to add spacing for next page (below) content*/
 	/*added margin to add spacing for next page (below) content*/
-	// background-image: url(https://media.giphy.com/media/12j6TXGnU1PQkw/giphy.gif);
+/*	// background-image: url(https://media.giphy.com/media/12j6TXGnU1PQkw/giphy.gif);*/
 	/*height 100vh (viewport height) is similar to setting height 100% ,but is a better way to set for background 
 	because if you cut the viewport it will still act as a full cover and also enables the body to extend wrap around all content instead of just a portion */
 	height: 100vh;
@@ -48,6 +48,15 @@
 	background-size:cover;
 }
 
+.header-title {
+	font-family:'Henny Penny', cursive;
+	font-size: 7em;
+	color: white;
+	text-align: center;
+	padding-bottom: 25px;
+	text-shadow: 10px 10px 5px black;
+}
+
 
 input {
 	height: 55px;
@@ -65,9 +74,6 @@ button {
 .poster {
 	position: fixed;
 	height: 70%;
-	// overflow: hidden;
-
-	
 }
 
 .span-img {
@@ -75,25 +81,19 @@ button {
 	width: 100%; 
     height: 50%; 
     background-position:35% 0%;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(60%, transparent) , to(rgba(250, 250, 250, 0.3)));
 
 }
 
 
 .poster-img {
 	width: 100%;
-	// clip: rect(30px, auto, auto, 10px);
-	// top: -20px;
-	// left: 10px;
-	// position: relative;
-	// -webkit-background-size:cover;
- //  	-moz-background-size:cover;
- //  	-o-background-size:cover;
 }
 
 .title{
 	padding-right:10em; 
 	color: white;
-	text-decoration: underline;
+	font-family: 'Architects Daughter', cursive;
 }
 
 .boarder {
@@ -119,7 +119,7 @@ button {
     max-height: 500px;
     overflow-y: scroll;
     background-image:url(https://wallpaperscraft.com/image/line_slanting_dark_background_surface_texture_50392_3840x2160.jpg);
-    opacity: .75;
+    opacity: .85;
     border-bottom-right-radius:10px;
 	border-bottom-left-radius:10px;
 
