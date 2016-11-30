@@ -1,18 +1,14 @@
-// Client ID
-// 45bd485f259d4c7c9fc04c5554b147fc
-// Client Secret
-// d8ffe8a175524fc5b8fcfdcd3c5b13e2
-
 var express = require('express');
 var app = express();
 var SpotifyWebApi = require('spotify-web-api-node');
+var config = require("./config");
 
 app.use("/", express.static("build"));
 
 var spotifyApi = new SpotifyWebApi({
-  clientId : '45bd485f259d4c7c9fc04c5554b147fc',
-  clientSecret : 'd8ffe8a175524fc5b8fcfdcd3c5b13e2',
-  redirectUri : 'http://localhost:8080/callback'
+  clientId : config.spotify.clientID,
+  clientSecret : config.spotify.clientSecret,
+  redirectUri : config.spotify.callbackURL
 });
 
 app.get("/api", function(req, res) {

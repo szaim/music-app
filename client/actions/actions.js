@@ -40,13 +40,12 @@ var fetchData = function(query) {
        })
 
        .then(function(data) {
-               console.log("DATA", data.tracks.items);
            return dispatch(
                fetchDataSuccess(data.tracks.items)
            );
        })
        .catch(function(error) {
-
+            console.log(error);
            return dispatch(
                fetchDataSuccess(error)
            );
@@ -62,19 +61,3 @@ exports.fetchDataSelected = fetchDataSelected;
 exports.FETCH_DATA_ERROR = FETCH_DATA_ERROR;
 exports.fetchDataError = fetchDataError;
 
-
-// const searchTrack = function(query) {
-//     console.log('SEARCH TRACK');
-//     let url = 'https://api.spotify.com/v1/search?q=' + query + '*&type=track';
-//     return fetch(url)
-//     .then(function(response) {
-// //         return response.json()
-// //     }).then(function(json) {
-// //         return json.tracks;
-// //     })
-// //     .catch(function(err) {
-// //         console.log('ERR' + err);
-// //     });
-// // };
-
-// export default searchTrack;

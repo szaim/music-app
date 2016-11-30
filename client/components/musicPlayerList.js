@@ -5,7 +5,6 @@ var actions = require('../actions/actions');
 var Poster = require('./poster');
 
 var Playlist = React.createClass({
-	//adding getInitialState fixed error (cant set property to null/string/boolean), not sure why the method is required to fix the error.
 	getInitialState: function() {
 		return {
 			checked: false
@@ -16,18 +15,10 @@ var Playlist = React.createClass({
 		var song = document.getElementById(this.props.num);
 		song.volume = 0.2;
 		e.preventDefault();
-		console.log('selected song!');
-		// console.log('poster form playlist', this.props.poster);
-	
-		//passing the api poster value to the fetchDataSelected action in the argument.
 		this.props.dispatch(actions.fetchDataSelected(this.props.poster, this.props.name));
 		this.setState({
 			checked: true
 		})
-		// return(
-		// <Poster songPoster={this.props.poster}/>
-
-		// )
 	},
 
 	render: function() {
@@ -64,12 +55,6 @@ var Playlist = React.createClass({
 
 });
 
-// var mapStateToProps = function(state, props) {
-//   return {
-//     musicList: state.musicList,
-//     posters: state.poster
-//   }
-// }
 
 var Container = connect()(Playlist);
 

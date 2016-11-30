@@ -17,7 +17,6 @@ var Form = React.createClass({
 	},
 
 	render: function() {
-		console.log('music list', this.props.musicList);
 		var list = this.props.musicList.map(function(value, index) {
 			console.log("value",value.preview_url);
 			return (
@@ -44,7 +43,7 @@ var Form = React.createClass({
 			<div className="container">
 			<h1 className='header-title'>Spotify Vibe</h1>
 			<div className=''>
-			<form className='text-xs-center input-group' onSubmit={this.onSubmit}>
+			<form className='text-xs-center input-group form' onSubmit={this.onSubmit}>
 				<input  className='form-control' type='text' placeholder='Type the name of a song' ref='userInput' required />
 				<span className='input-group-btn'>	
 				<button type='submit' className='btn btn-outline-secondary'>Search</button>

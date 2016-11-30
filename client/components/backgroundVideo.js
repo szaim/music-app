@@ -6,8 +6,6 @@ var actions = require('../actions/actions');
 
 var BackgroundVideo = function() {
 
-
-
 	return (
 		<div className='video'>
 		<video autoPlay='true' loop>
