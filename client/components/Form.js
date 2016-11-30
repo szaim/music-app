@@ -12,13 +12,14 @@ var Form = React.createClass({
 		e.preventDefault();
 		var searchItem = this.refs.userInput.value;
 		this.props.dispatch(actions.fetchData(searchItem));
+		// this.props.dispatch(actions.fetchDataSelected(this.props.musicList[0].album.images[1].url, this.props.musicList[0].name));
 		searchItem = '';
 	},
 
 	render: function() {
 		console.log('music list', this.props.musicList);
 		var list = this.props.musicList.map(function(value, index) {
-			console.log("value",value.album.name);
+			console.log("value",value.preview_url);
 			return (
 				
 		

@@ -31,7 +31,14 @@ var Playlist = React.createClass({
 	},
 
 	render: function() {
-
+		document.addEventListener('play', function(e){
+			var audios = document.getElementsByTagName('audio');
+			for(var i = 0, len = audios.length; i < len;i++){
+    			if(audios[i] != e.target){
+        		audios[i].pause();
+    			}
+			}
+		}, true);
 		return (
 		
 			<div onClick={this.selectedPoster} className='musicList offset-sm-7 m-t-1'>
@@ -43,8 +50,8 @@ var Playlist = React.createClass({
 					<span className='p-l-1 m-r-0'>
 					{this.props.name}, {this.props.artist} 
 					</span>
-					<audio id={this.props.num} controls onPlay={this.selectedPoster} volume>
-						<source src={this.props.song} />
+					<audio id={this.props.num} controls="controls" src={this.props.song} onPlay={this.selectedPoster}>
+						<source />
 					</audio>
 				</li>
 
