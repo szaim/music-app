@@ -15,7 +15,9 @@ var reducer = function (state, action) {
 	if(action.type === actions.FETCH_DATA_SUCCESS) {
 		console.log('success worked!', action);
 		var newState = update(state, {
-			musicList: {$set: action.data}
+			musicList: {$set: action.data},
+			poster: {$set: action.data[0].album.images[1].url},
+			title: {$set: action.data[0].name}
 		});
 		console.log('action fetchData', newState);
 		return newState;

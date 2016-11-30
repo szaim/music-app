@@ -12,8 +12,8 @@ var Form = React.createClass({
 		e.preventDefault();
 		var searchItem = this.refs.userInput.value;
 		this.props.dispatch(actions.fetchData(searchItem));
-		// this.props.dispatch(actions.fetchDataSelected(this.props.musicList[0].album.images[1].url, this.props.musicList[0].name));
 		searchItem = '';
+
 	},
 
 	render: function() {
@@ -66,7 +66,8 @@ var Form = React.createClass({
 
 var mapStateToProps = function(state, props) {
   return {
-    musicList: state.musicList
+    musicList: state.musicList,
+    text: state.text
   }
 }
 
